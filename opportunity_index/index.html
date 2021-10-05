@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>United States Re-Entry Opportunity Index</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <link rel="stylesheet" href="/opportunity_index/style.css" />
+
+  </head>
+  <body>
+  
+  
+  
+    <div id="map"></div>
+
+
+<div id="page">
+
+
+
+<h1>Opportunity Index for the Justice-Involved in the United States<br />
+<span class="byline"><strong>BY:</strong>
+Pragya Dewan,
+ Kristine Hur,
+  Stanislas Phanord, 
+Denna Taherzadeh,
+Audrey Yu </span>
+</h1>
+
+<h2>Background</h2>
+<p>The justice-involved face <a href="https://www.prisonfellowship.org/resources/newsroom/media-background-%20information/media-%20additional/statistics-criminal-%20justice-system/" target="_blank" title="The Cost of Criminal Justice">numerous employment challenges</a> both upon release from incarceration and throughout their lives. In 2015 alone, these challenges contributed to a <a href="http://www.pewtrusts.org/~/media/legacy/uploadedfiles/wwwpewtrustsorg/reports/sentencing_and_corrections/staterecidivismrevolvingdooramericaprisons20pdf.pdf" target="_blank" title="Pew Trusts">nationwide recidivism rate of 43.3%</a>. Research indicates that these challenges are comprised both of social stigmas, lack of marketable skills—as well as structural inequalities that has been systemically embedded within policies of scale.</p>
+
+<h2>Mission</h2>
+<p>While many government, nongovernmental organizations, and programs across the country seek to improve employment outcomes for the formerly-incarcerated via workforce development training (frequently, soft skills and vocational/technology training), their invaluable work often has often been less than effective when paired with policies that allow potential employers to de facto screen anyone with a criminal record out of a job search.  Shedding light on cities and states with regressive forms of these policies that promote inequality of opportunity to the justice-involved is invaluable—not just to the formerly-incarcerated themselves, but also to fair labor advocates, policy makers, and NGOs seeking to amplify their impact.</p>
+
+<h2>Key Question</h2>
+<p>How does equality of employment opportunity vary across the country? Within states? Between cities?</p>
+<p>Is there a miss-match between the policy needs and the regional contexts?</p>
+
+<h2>The Project</h2>
+<p>Here, we present an index that measures and visualizes the <strong>equality of opportunity for the justice-involved</strong>.  Our index was formed by analyzing the policy framework in a geographical unit (city and state) to identify both policies that target hiring practices and others that create near-insurmountable roadblocks—such as a high degree of regional socioeconomic precarity—to justice-involved individuals in difficult circumstances.  Our results are visualized in the interactive map above.</p>
+
+<h2>The Visualization</h2>
+<p>The map was rendered through a basemap from Mapbox and visualization tools from CartdoDB. A scale of blue-to-red was chosen to illustrate the relative equality of opportunity for the formerly incarcerated; regions that were determined to be more ‘progressive’ with regards to the rest of the dataset were rendered as being incrementally more blue, whereas those that were deemed to be less conducive for the successful re-integration for the justice-involved were rendered as being more red. Specifically: </p>
+
+<ul>
+<li><strong>State Policy Index: <em>Red (worse) - Blue (better)</em></strong><br />
+state polygons; states with higher index coefficients were deemed as being conducive for the re-integration of the formerly incarcerated. </li>
+<li><strong>City Policy Index: <em>Red (worse) - Blue (better)</em></strong><br />
+constant-size point coordinates; cities with higher index coefficients were deemed as being more conducive for the re-integration of the formerly incarcerated.</li>
+<li><strong>State Crime Change: <em>Red (worse) - Blue (better)</em></strong><br />
+state polygons; states with increase of crime over the years were deemed to be worse off than states with negative rate of change, which indicates positive growth in terms of regional criminal activities. </li>
+<li><strong>City Difficulty Index: <em>Dark red (worse) - Light red (better)</em></strong><br />
+This layer features size-differentiated point coordinates derived from the region’s unemployment and poverty rate. It also deviates from the red-blue scale of representation. All values in this layer were rendered as a shade of red, as even a minute value reflects negative circumstances. It is also differentiated by size; higher unemployment and poverty (and thus a higher resulting coefficient) rendered a larger circle, whereas smaller ones indicated the opposite. This layer has been overlayed on top of the City Policy Index layer to give a sense of the relative size of the issues across the different geographies of the United States.</li>
+</ul>
+
+<h2>Key Findings</h2>
+
+<h4>Context</h4>
+<p><strong>State Difficulty Context:</strong> Growth in number of people with a criminal record from 2012 to 2014 that shows the ‘severity’ of the problem:</p>
+<ul>
+<li>Highest Negative Growth (-27 to -20%): District of Columbia, Michigan, Oregon</li>
+<li>Highest Positive Growth (26 to 45%): Massachusetts, Louisiana, Mississippi, New York </li>
+</ul>
+
+<p><strong>City "Difficulty" Context: </strong> Underlying characteristics of a city (unemployment and poverty rates) that might reduce employment opportunities for anyone:</p>
+<ul>
+<li>Lower range: 9 - 15 (East Palo Alto, CA; Cambridge, MA; Alexandria, VA)</li>
+<li>Highest Range: 36 - 47.2  (Youngstown, OH; Compton, CA; Albany, GA; Memphis, TN)</li>
+</ul>
+
+<h4>Potential Interventions</h4>
+
+<p><strong>Policies set at the state level</strong> with greatest potential to impact the employment opportunity of justice-involved:</p>
+<ul>
+<li>Highest Score: 8.17 (Colorado)</li>
+<li>Lowest Score: 0.0  (Kansas, Michigan, New Jersey, Pennsylvania)</li>
+</ul>
+
+
+<p><strong>Policies set at the city level</strong> with greatest potential to impact the employment opportunity of justice-involved:</p>
+<ul>
+<li>Highest Score: 8 (San Francisco, Newark, New York)</li>
+<li>Lowest Score: 1  (24 cities including Pasadena, CA; Charlotte, NC; Kansas, Ithaca, NY; Cleveland, OH; Nashville, TN; Richmond, VA)</li>
+</ul>
+
+
+
+
+<h2>Next Steps</h2>
+<p>From here, there is the opportunity to collect additional contextual and policy data to enhance the insights that our map provides.  These may also allow us to distinguish meaningful correlations.</p>
+<p>We also, given further resources and time, would refine our indexing choices. It is likely that the dimensions we include in our policy indexes each affect equality of opportunity for the justice-involved at different magnitudes. We would like to conduct further research to justify a weighting scheme for our dimensions. There is also the opportunity to merge our state and city indexes in a meaningful way.</p>
+<p>Once we have codified our methodology and processes, we would ideally scale this exploration to create a landscape map of a greater number of cities.</p>
+
+
+
+<div class="methodology">
+
+<h2>Methodology</h2>
+
+<h3>Scope</h3>
+<ul>
+	<li>We examine the policy framework in a geographical unit that provides equality of employment opportunity to the justice-involved.</li>
+    <li>"Justice-involved" includes both recently released individuals seeking to re-enter civil society, but also any individuals with a past criminal record on file in state systems.</li>
+    <li><strong>State Selection:</strong> All 50 states.</li>
+    <li><strong>City Selection:</strong> Initially, we had planned to examined a random sample of cities of all types across the United States. While a useful exercise, the dearth of relevant policies in much of the sample resulted in a dataset results that had tooso much variance, and so little magnitude in certain dimensions, that they were neitherot informative nor very relevant to what the project had aimed to achieve. Instead, we opted to include all cities that had established at least some policy targeted towards equality of opportunity for the justice-involved.</li>
+    </ul>
+
+
+<h3>State Policy Index</h3>
+
+
+
+<h4>“Fair Chance” Policies</h4>
+
+<ul>
+<li>
+	<strong>Employer Liability:</strong> 
+    0 (least) — 1 (most) beneficial implications for the justice-involved<br />
+    If an employee did harm while working, would the employer be additionally liable for hiring someone that had a record.
+</li>
+<li><strong>Expungement</strong> 0 (least) — 1 (most) beneficial implications for the justice-involved<br />
+Are criminal records removed from state systems if the crime is non-violent/minor/a certain number of years has passed?  We allow variation within the 0-1 scale according to how inclusive the policy is for a state.
+</li>
+<li><strong>Identification</strong> 0 (least) — 1 (most) beneficial implications for the justice-involved<br />
+Upon release, many justice-involved are not given back their identification documents. Replacing licenses, birth certificates, social security cards, etc. not only costs money, but are prerequisites for being hired. Some states now include policies that provide either free or subsidized replacements for these documents. We allow variation within the 0-1 scale according to how generous the policy is within a state.</li>
+<li><strong>Occupational License Appeals:</strong> 0 (least) — 1 (most) beneficial implications for the justice-involved<br />
+Certain occupations require additional licenses to operate or participate in. When a license application is denied, an appeals process can help a justice-involved individual discover whether his or her record played a part in the decision process.
+</li>
+<li><strong>Sealing</strong> 0 (least) — 1 (most) beneficial implications for the justice-involved<br />
+Criminal records may be “closed” (but not removed) if the crime is non-violent/minor/a certain number of years has passed.  We allow variation within the 0-1 scale according to how inclusive the policy is for a state.
+</li>
+<li><strong>Workforce Training Exploration</strong> 0 (least) — 1 (most) beneficial implications for the justice-involved<br />
+Certain states mandate public agencies to research workforce training program possibilities to help the justice-involved.
+</li>
+</ul>
+
+<div class="citation">Data: <a href="http://www.nelp.org/content/uploads/2015/03/PromotingEmploymentofPeoplewithCriminalRecords.pdf" target="_blank" title="State Reforms Promoting Employment of People with Criminal Records: 2010‐11 Legislative Round‐Up1">State Reforms Promoting Employment of People with Criminal Records: 2010‐11 Legislative Round‐Up</a></div>
+
+<h4>Ban the Box Policies: </h4>
+<p>These policies relate to the practice of asking—in the very first round of a job application process—whether someone has a criminal record or not via a <strong>check box</strong>.</p>
+
+<ul>
+<li><strong>Ban the Box for Private Sector Employers</strong> 0 (not banned) or 1 (banned)</li>
+<li><strong>Ban the Box for Public Sector Vendors</strong> 0 (not banned) or 1 (banned)</li>
+<li><strong>Ban the Box for Public Sector Employers</strong> 0 (not banned) or 1 (banned)</li>
+<li><strong>Background Check Waived </strong> 0 (not waived) or 1 (waived)<br />
+Removes a criminal history background check requirement entirely for certain positions.</li>
+<li><strong>Ban the Box: Background Check Delayed</strong> 0 (not waived) or 1 (delayed)<br />
+Criminal history background check requirement is delayed to later in the hiring process—after finalists have been chosen, or conditional offers have been extended.
+</li>
+<li><strong>Ban the Box: Notice of Denial of Hiring</strong> 0 (no notice) or 1 (given notice)<br />
+The transparency required by this policy gives employers an incentive to find reasons other than a criminal record in making their hiring decisions.
+</li>
+<li><strong>Ban the Box: Copy of record of denial</strong> 0 (no notice) or 1 (given notice)<br />
+The transparency required by this policy gives employers an incentive to find reasons other than a criminal record in making their hiring decisions.
+</li>
+<li><strong>Ban the Box: Appeal or complaint of denial</strong> 0 (no notice) or 1 (given notice)<br />
+This policy provides the justice-involved some agency in cases where a criminal record may have been the sole reason for a denial.
+<li><strong>Equal Employment Opportunity Commission (EEOC) Laws Exist</strong> 0 (do not) or 1 (do)<br />
+The <a href="https://www.eeoc.gov/eeoc/" target="_blank" title="U.S. Equal Employment Opportunity Commission">U.S. Equal Employment Opportunity Commission</a> enforces federal laws that “make it illegal to discriminate against a job applicant or an employee because of the person's race, color, religion, sex (including pregnancy, gender identity, and sexual orientation), national origin, age (40 or older), disability or genetic information. It is also illegal to discriminate against a person because the person complained about discrimination, filed a charge of discrimination, or participated in an employment discrimination investigation or lawsuit.”</li>
+</ul>
+
+<div class="citation">Data: <a href="http://www.nelp.org/content/uploads/Ban-the-Box-Fair-Chance-State-and-Local-Guide.pdf" target="_blank">Ban the Box: State and Local Guide (National Employment Law Project)</a></div>
+
+<h4>Contributing Factors</h4>
+<ul>
+<li><strong>Denial of Supplemental Nutrition Assistance Program (SNAP) to Individuals with Drug Felonies</strong><br />
+<strong>7:</strong> Applies to all<br />
+<strong>6:</strong> Applies only to individuals convicted of distribution, manufacture, or trafficking<br />
+<strong>5:</strong> Does not apply to individuals who have completed their sentence or are complying with the terms of their judgment, parole, or probation (a.k.a. in court compliance)<br />
+<strong>4:</strong> Does not apply to individuals in treatment or who have completed treatment<br />
+<strong>3:</strong> Does not apply to individuals who comply with drug testing and test negative.<br />
+<strong>2:</strong> Ends after certain time after completion of sentence/release<br />
+<strong>1:</strong> Denial applies to no one
+</li>
+<li><strong>Denial of Temporary Assistance to Needy Families (TANF) to Individuals with Drug Felonies</strong><br />
+<strong>7:</strong> Applies to all<br />
+<strong>6:</strong> Applies only to individuals convicted of distribution, manufacture, or trafficking<br />
+<strong>5:</strong> Does not apply to individuals who have completed their sentence or are complying with the terms of their judgment, parole, or probation (a.k.a. in court compliance)<br />
+<strong>4:</strong> Does not apply to individuals in treatment or who have completed treatment<br />
+<strong>3:</strong> Does not apply to individuals who comply with drug testing and test negative.<br />
+<strong>2:</strong> Ends after certain time after completion of sentence/release<br />
+<strong>1:</strong> Applies to no one</li>
+</ul>
+
+<div class="citation">Data: <a href="http://lac.org/toolkits/TANF/TANF.htm" title="TANF and SNAP - Legal Action Center">Legal Action Center - TANF and SNAP Policies by State</a></div>
+
+
+<h3>City Policy Index</h3> 
+<p style="margin-top: 0; padding-top: 0;">These include the same “Ban the Box” policies described in the “State Policies” section.  However, when certain cities have extended these interventions further.</p>
+<ul>
+<li><strong>Ban the Box for Private Sector Employers</strong> 0 (not banned) or 1 (banned)</li>
+<li><strong>Ban the Box for Public Sector Vendors</strong> 0 (not banned) or 1 (banned)</li>
+<li><strong>Ban the Box for Public Sector Employers</strong> 0 (not banned) or 1 (banned)</li>
+<li><strong>Background Check Waived </strong> 0 (not waived) or 1 (waived)<br />
+Removes a criminal history background check requirement entirely for certain positions.</li>
+<li><strong>Ban the Box: Background Check Delayed</strong> 0 (not waived) or 1 (delayed)<br />
+Criminal history background check requirement is delayed to later in the hiring process—after finalists have been chosen, or conditional offers have been extended.
+</li>
+<li><strong>Ban the Box: Notice of Denial of Hiring</strong> 0 (no notice) or 1 (given notice)<br />
+The transparency required by this policy gives employers an incentive to find reasons other than a criminal record in making their hiring decisions.
+</li>
+<li><strong>Ban the Box: Copy of record of denial</strong> 0 (no notice) or 1 (given notice)<br />
+The transparency required by this policy gives employers an incentive to find reasons other than a criminal record in making their hiring decisions.
+</li>
+<li><strong>Ban the Box: Appeal or complaint of denial</strong> 0 (no notice) or 1 (given notice)<br />
+This policy provides the justice-involved some agency in cases where a criminal record may have been the sole reason for a denial.
+<li><strong>Equal Employment Opportunity Commission (EEOC) Laws Exist</strong> 0 (do not) or 1 (do)<br />
+The <a href="https://www.eeoc.gov/eeoc/" target="_blank" title="U.S. Equal Employment Opportunity Commission">U.S. Equal Employment Opportunity Commission</a> enforces federal laws that “make it illegal to discriminate against a job applicant or an employee because of the person's race, color, religion, sex (including pregnancy, gender identity, and sexual orientation), national origin, age (40 or older), disability or genetic information. It is also illegal to discriminate against a person because the person complained about discrimination, filed a charge of discrimination, or participated in an employment discrimination investigation or lawsuit.”</li>
+</ul>
+
+<div class="citation">Data: <a href="http://www.nelp.org/content/uploads/Ban-the-Box-Fair-Chance-State-and-Local-Guide.pdf" target="_blank">Ban the Box: State and Local Guide (National Employment Law Project)</a></div>
+
+<h3>State "Difficulty" Index</h3>
+<p style="margin-top: 0; padding-top: 0;">This index compares the number of people with a criminal record on file in each state from 2012 to 2014.  We then used this data to calculate a growth rate.  This is meant to express how severe—or widespread—is the problem of unequal hiring practices for the justice-involved.  Those states with a slow growth in the number of residents with criminal records impact relatively fewer individuals than those states with faster growth rates.</p>
+
+<div class="citation">Data: <a href="http://www.nelp.org/content/uploads/2015/03/PromotingEmploymentofPeoplewithCriminalRecords.pdf" target="_blank" title="State Reforms Promoting Employment of People with Criminal Records: 2010‐11 Legislative Round‐Up1">State Reforms Promoting Employment of People with Criminal Records: 2010‐11 Legislative Round‐Up</a></div>
+
+
+<h3>City "Difficulty" Index</h3>
+<p style="margin-top: 0; padding-top: 0;">This index attempts to describe underlying characteristics of a city that might reduce employment opportunities for anyone. We include these measures as an additional layer to provide insight into any miss-matches between policy and real-world context.</p>
+
+<ul>
+<li><strong>Unemployment Rate</strong> (as a percentage)</li>
+<li><strong>Poverty Rate</strong> (as a percentage</li>
+</ul>
+
+<div class="citation">Data: <a href="https://www.census.gov/programs-surveys/acs/" title="U.S. Census Bureau - American Community Survey" target="_blank">U.S. Census Bureau - American Community Survey</a><br />
+Data: <a href="http://www.bjs.gov/index.cfm?ty=tp&tid=47" target="_blank" title="Bureau of Justice Statistics">U.S. Bureau of Justice Statistics - Survey of State Criminal History Information Systems, 2014</a><br />
+Data: <a href="http://www.bls.gov/bls/unemployment.htm" target="_blank" title="U.S. Bureau of Labor Statistics on Unemployment">U.S. Bureau of Labor Statistics on Unemployment</a></div>
+
+<h3>Normalization</h3>
+
+<h4>State Policy Index (maximum score of 17)</h4>
+<p>The combined State Policy Index has a maximum score of 17.</p>
+<ul>
+<li>Each of the six <strong>"Fair Chance"</strong> policies was assessed on a scale of 0-1.</li>
+<li>These were added to the nine <strong>"Ban the Box"</strong> policies, each of which were assessed on a scale of 0-1.</li>
+<li><strong>TANF:</strong><br />
+We rated this dimension from 0=MOST friendly to 6=LEAST divided by 6.  We normalized this to a scale of 0-1 so this would not be overly weighted in the index.</li>
+
+<li><strong>SNAP:</strong><br />
+We rated this dimension from 0=MOST friendly to 6=LEAST divided by 6.  We normalized this to a scale of 0-1 so this would not be overly weighted in the index.</li>
+</ul>
+
+
+
+
+<h4>City Policy Index (maximum score of 17)</h4>
+<p>The combined City Policy Index has a maximum score of 9.</p>
+<ul>
+<li>On the city level, most interventions were <strong>"Ban the Box"</strong> policies, each of which were assessed on a scale of 0-1.</li>
+</ul>
+
+
+
+<h3>Data Sources</h3>
+<ul>
+<li><a href="http://www.nelp.org/content/uploads/Ban-the-Box-Fair-Chance-State-and-Local-Guide.pdf" target="_blank">Ban the Box: State and Local Guide (National Employment Law Project)</a> (PDF)<br /> This PDF includes data on "Ban the Box" policies at the city, county, and state level.<br />
+(Updated every two years)</li>
+
+<li><a href="http://lac.org/toolkits/TANF/TANF.htm" title="TANF and SNAP - Legal Action Center">Legal Action Center - TANF and SNAP Policies by State</a> (HTML)</li>
+
+<li><a href="https://www.census.gov/programs-surveys/acs/" title="U.S. Census Bureau - American Community Survey" target="_blank">U.S. Census Bureau - American Community Survey</a> (CSV)</li>
+
+
+<li><a href="http://www.bjs.gov/index.cfm?ty=tp&tid=47" target="_blank" title="Bureau of Justice Statistics">U.S. Bureau of Justice Statistics - Survey of State Criminal History Information Systems, 2014</a><br />
+"Table 1: Overview of state criminal history record systems, December 31, 2014"<br />
+(Updated every two years)
+</li>
+
+<li><a href="http://www.bls.gov/bls/unemployment.htm" target="_blank" title="U.S. Bureau of Labor Statistics on Unemployment">U.S. Bureau of Labor Statistics on Unemployment</a> (CSV)</li>
+
+<li><a href="http://www.nelp.org/content/uploads/2015/03/PromotingEmploymentofPeoplewithCriminalRecords.pdf" target="_blank" title="State Reforms Promoting Employment of People with Criminal Records: 2010‐11 Legislative Round‐Up1">State Reforms Promoting Employment of People with Criminal Records: 2010‐11 Legislative Round‐Up</a> (PDF)<br />
+<strong>Note:</strong> Ideally, we would identify a newer aggregate source for this data.</li>
+
+</ul>
+
+
+
+
+</div>
+
+
+
+
+<div class="footer">
+	<p><em class="grey">29 April 2016</em></p>
+</div>
+
+
+</div>
+    
+
+
+
+
+
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+
+    <script>
+      function main() {
+        cartodb.createVis('map', 'https://columbialibraries.cartodb.com/u/eh2699/api/v2/viz/b4e6167a-0b31-11e6-8a47-0e31c9be1b51/viz.json', {
+            shareable: true,
+            title: true,
+            description: true,
+            search: true,
+            tiles_loader: true,
+            center_lat: 41.878003,
+            center_lon: -94.997702,
+            zoom: 4
+        })
+        .done(function(vis, layers) {
+          // layer 0 is the base layer, layer 1 is cartodb layer
+          // setInteraction is disabled by default
+          layers[1].setInteraction(true);
+          layers[1].on('featureOver', function(e, latlng, pos, data) {
+            cartodb.log.log(e, latlng, pos, data);
+			
+          });
+          // you can get the native map to work with it
+          var map = vis.getNativeMap();
+          // now, perform any operations you need
+          // map.setZoom(3);
+          // map.panTo([50.5, 30.5]);
+        })
+        .error(function(err) {
+          console.log(err);
+        });
+      }
+      window.onload = main;
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </body>
+</html>

@@ -1,0 +1,46 @@
+html, body, #map {
+height: 500px;
+padding: 0;
+margin: 0;
+}
+
+#map {}
+
+#page {
+margin: 50px 100px 0;
+font-family: helvetica, arial, sans-serif; font-size: 62.5%;}
+#page h1, #page h2, #page h3, #page h4, #page h5 {font-size: 1.8em; font-weight: bold;}
+#page h1 {font-size: 2.5em; margin: 0 0 !important; padding: .5em 0 1em !important; color: #000;}
+#page h2 { font-size: 2em; margin: 1.5em 0 .25em; text-transform: none; color: #000;}
+#page h4 {font-size: 1.5em; margin: 1.5em 0 0; text-transform: uppercase; color: #1a9cfe;}
+
+.methodology h3 {margin-bottom: 0 !important; padding-bottom: 0 !important;}
+.byline {color: #777; text-transform: uppercase; font-size: 12px;}
+
+p {font-family: arial, helvetica, sans-serif; font-size: 1.75em; line-height: 1.75em;}
+
+a, a:visited {color: #00a2ff; text-decoration: underline;}
+a:hover {color: #444 !important;}
+.timestamp {font-size: 1.2em; text-transform: uppercase; color: #aeaeae !important;}
+a.read-more, a.read-more:visited {color: #000; font-weight: bold; text-transform: uppercase; font-size: 1em;}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+blockquote {border-bottom: 1px #44cea9 dashed; margin: 0 0 1em; padding: 1em 0 0;}
+
+#page ul {font-size: 1.75em;}
+#page ul li {padding: 0 0 .5em; margin: 0 !important;}
+
+.grey {color: #BBB;}
+
+.footer {border-top: #BBB solid 1px; padding-top: 15px;}
+
+.methodology {background-color: #EFEFEF; padding: 15px 25px 20px; margin: 40px 0px 40px;}
+
+.dotted {border-top: border: 1px #777 dotted; padding-top: 20px;}
+
+.citation {line-height: 1.75em; text-transform: uppercase; color: #777; font-size: 1.2em; margin: 20px 0 40px 30px; padding: 0;}
+.citation a, .citation a:visited {color: #777 !important;}
+.citation a:hover {color: #1a9dfe !important;}
